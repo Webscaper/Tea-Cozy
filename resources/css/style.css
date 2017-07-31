@@ -1,0 +1,108 @@
+html {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  font-family: helvetica;
+  font-size: 22px;
+  opacity: 0.9;
+  color: seashell;
+}
+
+li {
+  display: inline;
+  margin-left: 15px; /* I realize this could be done with another flexbox for the navigation list items by using "space-between" and dictating the total width. This just seemed easier, what is the best practice? */
+}
+
+a {
+  color: seashell;
+}
+
+h2 {
+  margin-bottom: -10px; /* I could not find another way to reduce the distance between the h2 and h4 element in .missiontext , any advice? */
+}
+
+.nav {
+  height: 69px;
+  width: 100%;
+  background-color: black;
+  top: 0;
+  position: fixed;
+  border-bottom: 1px solid seashell;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+.links {
+  margin-right: 25px; /* Not sure why I need this. The "s" in "Locations" just exits the screen on the far right if I do not add this margin. */
+}
+
+.nav img {
+  height: 50px;
+  margin-left: 10px;
+}
+
+.wrapper { /* Only tok an hour before I realized the background of my .mission div was stretching when given padding, meaning I would need a wrapper to properly separate my navigation from the content underneath */
+  padding-top: 62px; /* This must be some kind of magic number */
+  width: 1300px;
+  margin: auto;
+}
+
+.mission {
+  margin: auto;
+  height: 700px;
+  width: 1200px;
+  background-image: url("../images/img-mission-background.jpg");
+  display: flex;
+  align-items: center;
+}
+
+.blackbar {
+  background-color: black;
+  width: 1200px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+}
+
+.missiontext { /* Was this text supposed to shrink according to size changes in the browser? I can't make It shrink, how do I do that? */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.products {
+  padding-top: 50px;
+  margin: auto;
+  width: 1000px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.month {
+  width: 1000px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  height: 240px;
+  width: 300px;
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.box h4 {
+  margin: 0px;
+}

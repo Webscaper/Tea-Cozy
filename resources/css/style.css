@@ -21,10 +21,6 @@ a {
   color: seashell;
 }
 
-h2 {
-  margin-bottom: -10px; /* I could not find another way to reduce the distance between the h2 and h4 element in .missiontext , any advice? */
-}
-
 .nav {
   height: 69px;
   width: 100%;
@@ -47,16 +43,10 @@ h2 {
   margin-left: 10px;
 }
 
-.wrapper { /* Only tok an hour before I realized the background of my .mission div was stretching when given padding, meaning I would need a wrapper to properly separate my navigation from the content underneath */
-  padding-top: 62px; /* This must be some kind of magic number */
-  width: 1300px;
-  margin: auto;
-}
-
 .mission {
   margin: auto;
   height: 700px;
-  width: 1200px;
+  max-width: 1200px;
   background-image: url("../images/img-mission-background.jpg");
   display: flex;
   align-items: center;
@@ -64,14 +54,14 @@ h2 {
 
 .blackbar {
   background-color: black;
-  width: 1200px;
-  height: 120px;
+  width: 100%;
+  max-height: 300px;
   display: flex;
   justify-content: center;
 }
 
-.missiontext { /* Was this text supposed to shrink according to size changes in the browser? I can't make It shrink, how do I do that? */
-  display: flex;
+.missiontext {
+  text-align: center;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -80,27 +70,22 @@ h2 {
 .products {
   padding: 50px 0px;
   margin: auto;
-  width: 1000px;
+  width: 100%;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .month {
-  width: 1000px;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  text-align: center;
 }
 
 .box {
-  height: 240px;
-  width: 300px;
+  max-height: 240px;
+  max-width: 300px;
   margin: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  text-align: center;
 }
 
 .box h4 {
@@ -110,27 +95,24 @@ h2 {
 .locations {
   margin: auto;
   height: 500px;
-  width: 1200px;
+  max-width: 1200px;
   background-image: url("../images/img-locations-background.jpg");
   background-repeat: no-repeat;
   background-position: bottom;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
   align-items: center;
+  /*overflow: scroll;  I don't like this solution, what would be preferable to avoid content overflowing in the bottom when resizing? */
 }
 
 .txtbox {
-  width: 800px;
-  height: 30px;
+  width: 100%;
   text-align: center;
-  border: 1px solid blue;
 }
 
 .blkbox {
-  margin-right: 40px;
-  width: 300px;
-  height: 300px;
+  flex-basis: 300px;
   background-color: black;
   opacity: 1;
   display: flex;

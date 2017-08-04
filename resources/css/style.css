@@ -89,7 +89,7 @@ a {
   text-align: center;
 }
 
-.box h4 { /* Margin of flex child box elements are hugely bloated, what gives? */
+.box h4 { /* Can I solve this more smoothly somehow? */
   margin-top: 10px;
 }
 
@@ -126,14 +126,8 @@ a {
 .contact {
   max-height: 200px;
   width: 100%;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-  align-items: center;
-}
+  text-align: center;
 
-.contact h2, h5 { /* Margin of flex child box elements are hugely bloated, what gives? */
-  margin: 20px;
 }
 
 footer {

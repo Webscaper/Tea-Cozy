@@ -8,7 +8,6 @@ body {
   background-color: black;
   font-family: helvetica;
   font-size: 22px;
-  opacity: 0.9;
   color: seashell;
 }
 
@@ -44,6 +43,7 @@ a {
 }
 
 .mission {
+  padding-top: 69px;
   margin: auto;
   height: 700px;
   max-width: 1200px;
